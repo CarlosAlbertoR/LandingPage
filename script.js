@@ -2,7 +2,8 @@ let boton = document.getElementById("icon");
 let links = document.getElementById("links");
 let count = 0;
 
-boton.addEventListener("click", function() {
+boton.addEventListener("click", function(e) {
+    e.preventDefault();
     if (count == 0) {
         links.className = ("links two");
         count = 1;
