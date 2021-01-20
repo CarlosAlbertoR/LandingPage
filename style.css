@@ -15,6 +15,7 @@ nav {
 }
 
 nav a {
+    animation: moveToLeft 1s ease-in;
     color: #ffffff;
     display: inline-block;
     text-decoration: none;
@@ -43,6 +44,7 @@ header {
 }
 
 img {
+    animation: moveToTop 1s ease-in;
     display: block;
     height: 450px;
     object-fit: cover;
@@ -55,14 +57,17 @@ img {
 }
 
 .texts h1 {
+    animation: moveToRight 1s ease-in;
     font-size: 80px;
 }
 
 .texts h2 {
+    animation: moveToLeft 1s ease-in;
     font-size: 30px;
 }
 
 .texts a {
+    animation: moveToTop 1s ease-in;
     border: 1px solid #ffffff;
     border-radius: 3px;
     color: #ffffff;
@@ -84,4 +89,37 @@ img {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100px;
     width: 100%;
+}
+
+@keyframes moveToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
