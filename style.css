@@ -9,16 +9,22 @@ body {
 }
 
 nav {
+    display: flex;
+    justify-content: flex-start;
     left: 20px;
     position: fixed;
     top: 20px;
 }
 
 nav a {
-    animation: moveToLeft 1s ease-in;
     color: #ffffff;
-    display: inline-block;
     text-decoration: none;
+}
+
+.icon {
+    animation: moveToLeft 1s ease-in;
+    display: block;
+    z-index: 100;
 }
 
 header {
@@ -89,6 +95,36 @@ img {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100px;
     width: 100%;
+}
+
+.links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    transition: all 1s ease;
+    background: #000;
+    width: 100%;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f80759, #bc4e9c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.one {
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.two {
+    -webkit-clip-path: circle(150% at 1% 1%);
+    clip-path: circle(150% at 1% 1%);
 }
 
 @keyframes moveToLeft {
